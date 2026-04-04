@@ -19,6 +19,6 @@ export class Juego extends Producto implements Comprar {
     }
 
     public mostrarDatos(): string {
-        return this.getTitulo() 
+        return this.getTitulo() + " - " + this.genero + " - $" + this.getPrecio();
     }
 }
