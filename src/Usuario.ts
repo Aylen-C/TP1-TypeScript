@@ -14,9 +14,22 @@ export class Usuario {
         return this.nombre;
     }
 
-    public agregarJuego(juego: Juego): void{
-        this.juegosComprados.push(juego);        
-    } //agrega juego a la listo
+    public agregarJuego(juego: Juego): void;
+    public agregarJuego(juego: Juego[]): void;
+
+    public agregarJuego(juego: Juego | Juego[]): void {
+        if (juego instanceof Juego) {
+            this.juegosComprados.push(juego);
+        }
+        else {
+            let i = 0;
+
+            while (i < juego.length) {
+                this.juegosComprados.push(juego[i]);
+                i = i + 1;
+            }
+        }
+    }
 
     public verJuegosComprados(): Juego[] {
         return this.juegosComprados;

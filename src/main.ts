@@ -5,10 +5,10 @@ import {Usuario} from "./Usuario";
 const tienda = new Tienda();
 const usuario = new Usuario("Aylen");
 
-const juego1 = new Juego("Avatar: Frontiers of Pandora", 23.99, "Aventura");
-const juego2 = new Juego("Red Dead Redemption 2", 59.99, "Accion");
-const juego3 = new Juego("Cyberpunk 2077", 44.99, "RPG");
-const juego4 = new Juego("Hogwarts Legacy", 30.00, "RPG");
+const juego1 = new Juego("Avatar: Frontiers of Pandora", "Aventura", 23.99);
+const juego2 = new Juego("Red Dead Redemption 2", "Accion", 59.99);
+const juego3 = new Juego("Cyberpunk 2077", "RPG", 44.99);
+const juego4 = new Juego("Hogwarts Legacy", "RPG", 30.00);
 
 tienda.agregarJuego(juego1);
 tienda.agregarJuego(juego2);

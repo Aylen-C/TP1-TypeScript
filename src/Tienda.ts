@@ -17,11 +17,9 @@ export class Tienda {
         let i: number = 0;
 
         while (i < this.catalogo.length) {
-
             if (this.catalogo[i].getTitulo() === nombre) {
                 encontrados.push(this.catalogo[i]);
             }
-
             i = i + 1;
         }
         return encontrados;
@@ -32,5 +30,4 @@ export class Tienda {
 
         return "Compra realizada";
     }
-
 }

@@ -12,4 +12,5 @@ describe ("Tienda", () => {
 
         expect(tienda.buscarJuego("Avatar: Frontiers of Pandora")).toEqual([juego1]);
     });
+
 });
