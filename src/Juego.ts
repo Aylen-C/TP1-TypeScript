@@ -5,7 +5,7 @@ export class Juego extends Producto implements Comprar {
 
     private genero: string;
 
-    constructor(titulo: string, precio: number, genero: string){
+    constructor(titulo: string, genero: string, precio: number){
         super(titulo, precio);
         this.genero = genero;
     }
@@ -19,6 +19,6 @@ export class Juego extends Producto implements Comprar {
     }
 
     public mostrarDatos(): string {
-        return this.getTitulo() + " - " + this.genero + " - $" + this.getPrecio();
+        return this.getTitulo() + " - " + this.genero + " - " + this.getPrecio();
     }
 }

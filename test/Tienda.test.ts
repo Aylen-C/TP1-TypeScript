@@ -6,7 +6,7 @@ describe ("Tienda", () => {
     test("agregar juego a la tienda", () => {
     
         const tienda = new Tienda();
-        const juego1 = new Juego("Avatar: Frontiers of Pandora", 23.99, "Aventura");
+        const juego1 = new Juego("Avatar: Frontiers of Pandora", "Aventura", 23.99);
         
         tienda.agregarJuego(juego1);
 
