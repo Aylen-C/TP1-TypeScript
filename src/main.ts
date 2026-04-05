@@ -1,14 +1,20 @@
-class Persona {
-    nombre: string;
+import {Juego} from "./Juego";
+import {Tienda} from "./Tienda";
+import {Usuario} from "./Usuario";
 
-    constructor(nombre: string){
-        this.nombre = nombre;
-    }
+const tienda = new Tienda();
+const usuario = new Usuario("Aylen");
 
-    saludar(): string{
-        return "Hola " + this.nombre;
-    }
-}
+const juego1 = new Juego("Avatar: Frontiers of Pandora", 23.99, "Aventura");
+const juego2 = new Juego("Red Dead Redemption 2", 59.99, "Accion");
+const juego3 = new Juego("Cyberpunk 2077", 44.99, "RPG");
+const juego4 = new Juego("Hogwarts Legacy", 30.00, "RPG");
 
-const p = new Persona("Aylen")
-console.log(p.saludar())
+tienda.agregarJuego(juego1);
+tienda.agregarJuego(juego2);
+tienda.agregarJuego(juego3);
+tienda.agregarJuego(juego4);
+
+console.log(tienda.buscarJuego("Cyberpunk 2077"));
+console.log(tienda.comprarJuego(usuario, juego3));
+console.log(usuario.verJuegosComprados());

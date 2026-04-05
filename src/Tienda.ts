@@ -24,6 +24,13 @@ export class Tienda {
 
             i = i + 1;
         }
+        return encontrados;
+    }
+
+    public comprarJuego(usuario: Usuario, juego: Juego): string {
+        usuario.agregarJuego(juego);
+
+        return "Compra realizada";
     }
 
 }
