@@ -1,11 +1,11 @@
 import {Juego} from "./Juego";
-import {Usuario} from "./Juego";
+import {Usuario} from "./Usuario";
 
 export class Tienda {
     private catalogo: Juego[];
 
     constructor() {
-        this.catologo = [];
+        this.catalogo = [];
     }
 
     public agregarJuego(juego: Juego): void {

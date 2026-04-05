@@ -1,6 +1,6 @@
 import {describe, test, expect} from "vitest";
-import {Juego} from "./Juego";
-import {Tiendo} from "./Tienda";
+import {Juego} from "../src/Juego";
+import {Tienda} from "../src/Tienda";
 
 describe ("Tienda", () => { 
     test("agregar juego a la tienda", () => {
