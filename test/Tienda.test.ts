@@ -2,4 +2,14 @@ import {describe, test, expect} from "vitest";
 import {Juego} from "./Juego";
 import {Tiendo} from "./Tienda";
 
-describe ("Tienda", () )
+describe ("Tienda", () => { 
+    test("agregar juego a la tienda", () => {
+    
+        const tienda = new Tienda();
+        const juego1 = new Juego("Avatar: Frontiers of Pandora", 23.99, "Aventura");
+        
+        tienda.agregarJuego(juego1);
+
+        expect(tienda.buscarJuego("Avatar: Frontiers of Pandora")).toEqual([juego1]);
+    });
+});
