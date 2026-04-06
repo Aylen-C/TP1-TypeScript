@@ -1,12 +1,14 @@
 import { Producto } from "./Producto";
-import { Comprar } from "./Comprar";
+import { Comprar } from "./IComprar";
 
+// juego hereda de producto e implementa comprar
 export class Juego extends Producto implements Comprar {
 
+    // atributo propio de juego
     private genero: string;
 
     constructor(titulo: string, genero: string, precio: number){
-        super(titulo, precio);
+        super(titulo, precio); //llama al constructor de Producto
         this.genero = genero;
     }
 
@@ -18,6 +20,7 @@ export class Juego extends Producto implements Comprar {
         return "Juego Comprado";
     }
 
+    // muestra los datos del juego
     public mostrarDatos(): string {
         return this.getTitulo() + " - " + this.genero + " - " + this.getPrecio();
     }
